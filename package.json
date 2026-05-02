@@ -1,0 +1,17 @@
+{
+  "name": "ap23110011271",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "check": "node --check src/index.js && node --check src/app.js && node --check src/logger/loggingClient.js && node --check src/middleware/requestLogger.js && node --check src/services/evaluationApi.js && node --check src/services/schedulerService.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.2"
+  }
+}
