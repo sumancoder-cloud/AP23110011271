@@ -10,12 +10,9 @@ const app = createApp();
 async function bootstrap() {
   await connectMongo();
 
-  app.listen(port, () => {
-    process.stdout.write(`Server listening on port ${port}\n`);
-  });
+  app.listen(port);
 }
 
 bootstrap().catch((error) => {
-  process.stderr.write(`Failed to start server: ${error.message}\n`);
   process.exit(1);
 });

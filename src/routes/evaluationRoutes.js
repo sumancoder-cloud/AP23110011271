@@ -2,7 +2,21 @@ import { Router } from 'express';
 import { ScheduleRun } from '../models/scheduleRun.js';
 import { fetchProtectedResource } from '../services/evaluationApi.js';
 import { solveVehicleMaintenance } from '../services/schedulerService.js';
-import { demoDepots, demoVehicles } from '../data/demoScheduleData.js';
+
+const demoDepots = {
+  depots: [
+    { ID: 1, MechanicHours: 60 }
+  ]
+};
+
+const demoVehicles = {
+  vehicles: [
+    { TaskID: 'demo-task-1', Duration: 8, Impact: 9 },
+    { TaskID: 'demo-task-2', Duration: 6, Impact: 7 },
+    { TaskID: 'demo-task-3', Duration: 5, Impact: 6 },
+    { TaskID: 'demo-task-4', Duration: 4, Impact: 4 }
+  ]
+};
 
 export const evaluationRouter = Router();
 
