@@ -7,7 +7,7 @@ Backend submission for the campus hiring evaluation.
 - Node.js
 - Express
 - JavaScript
-- MongoDB
+
 
 ## Structure
 
@@ -16,7 +16,7 @@ Backend submission for the campus hiring evaluation.
 - `src/middleware/` request logging middleware
 - `src/services/` evaluation API and scheduling services
 - `logging_middleware/` assignment deliverable folder
-- `vehicle_maintenance_scheduler/` assignment deliverable folder
+- `vehicle_maintence_scheduler/` assignment deliverable folder
 - `notification_app_be/` assignment deliverable folder
 
 ## Run
@@ -26,3 +26,4 @@ Backend submission for the campus hiring evaluation.
 3. Run `npm install`.
 4. Start with `npm start`.
 5. Open `GET /api/vehicle-schedule` to verify the protected API integration.
+
