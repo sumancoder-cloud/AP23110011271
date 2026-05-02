@@ -2,6 +2,7 @@ import { logEvent } from '../logger/loggingClient.js';
 
 export function requestLogger(req, res, next) {
   const start = Date.now();
+  const token = process.env.EVALUATION_BEARER_TOKEN;
 
   res.on('finish', () => {
     const duration = Date.now() - start;
@@ -11,7 +12,8 @@ export function requestLogger(req, res, next) {
       stack: 'backend',
       level,
       packageName: 'middleware',
-      message: `${req.method} ${req.originalUrl} -> ${res.statusCode} in ${duration}ms`
+      message: `${req.method} ${req.originalUrl} -> ${res.statusCode} in ${duration}ms`,
+      token
     });
   });
 
